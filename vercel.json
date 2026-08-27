@@ -1,8 +1,7 @@
 {
   "version": 2,
-  "framework": null,
-  "buildCommand": "npm run build --workspace=client",
-  "outputDirectory": "client/build",
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "build",
   "rewrites": [
     {
       "source": "/api/(.*)",

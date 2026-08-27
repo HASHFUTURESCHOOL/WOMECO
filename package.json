@@ -8,8 +8,8 @@
     "admin"
   ],
   "scripts": {
-    "vercel-build": "npm run build --workspace=client",
-    "build": "npm run build --workspace=client",
+    "vercel-build": "npm run build --workspace=client && cp -r client/build ./build",
+    "build": "npm run build --workspace=client && cp -r client/build ./build",
     "build:client": "npm run build --workspace=client",
     "build:admin": "npm run build --workspace=admin"
   },
