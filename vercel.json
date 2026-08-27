@@ -2,15 +2,14 @@
   "version": 2,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "build",
-  "rewrites": [
+  "redirects": [
     {
       "source": "/admin",
-      "destination": "https://womeco-admin.vercel.app"
-    },
-    {
-      "source": "/admin/:path*",
-      "destination": "https://womeco-admin.vercel.app/:path*"
-    },
+      "destination": "https://admin.womeco.org",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "/api/index.js"
