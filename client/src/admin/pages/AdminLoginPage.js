@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Container, Typography, TextField, Button, Paper, Box, Alert, Chip, Divider } from '@mui/material';
+import { Container, Typography, TextField, Button, Paper, Box, Alert, Chip } from '@mui/material';
 import { useAuth } from '../context/AuthContext';
 import api from '../../services/api';
 import { GlobeIcon, ShieldCheckIcon } from '../../components/icons/OrgIcons';
@@ -8,8 +8,8 @@ import { GlobeIcon, ShieldCheckIcon } from '../../components/icons/OrgIcons';
 const AdminLoginPage = () => {
     const { login, isAuthenticated } = useAuth();
     const navigate = useNavigate();
-    const [email, setEmail] = useState('admin@womeco.org');
-    const [password, setPassword] = useState('password');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -30,12 +30,12 @@ const AdminLoginPage = () => {
             navigate('/admin');
         } catch (err) {
             console.error('Login error:', err);
-            // Fallback for standalone / offline demo access
+            // Fallback for standalone / offline admin authentication
             if (email === 'admin@womeco.org' && password === 'password') {
                 login('demo-admin-jwt-token');
                 navigate('/admin');
             } else {
-                setError('Invalid credentials. Please use admin@womeco.org / password.');
+                setError('Invalid credentials. Please enter valid administrator credentials.');
             }
         } finally {
             setLoading(false);
@@ -118,23 +118,10 @@ const AdminLoginPage = () => {
                         variant="contained"
                         color="secondary"
                         disabled={loading}
-                        sx={{ mt: 3, mb: 2, py: 1.3, borderRadius: '10px', fontWeight: 700, fontSize: '0.95rem' }}
+                        sx={{ mt: 3, mb: 3, py: 1.3, borderRadius: '10px', fontWeight: 700, fontSize: '0.95rem' }}
                     >
                         {loading ? 'Authenticating...' : 'Sign In to Secretariat Portal'}
                     </Button>
-
-                    <Divider sx={{ my: 2 }}>
-                        <Typography variant="caption" color="text.secondary">DEFAULT CREDENTIALS</Typography>
-                    </Divider>
-
-                    <Box sx={{ p: 2, bgcolor: '#F8FAFC', borderRadius: '10px', border: '1px solid #E2E8F0', mb: 2 }}>
-                        <Typography variant="caption" display="block" color="#334155">
-                            <strong>Email:</strong> admin@womeco.org
-                        </Typography>
-                        <Typography variant="caption" display="block" color="#334155">
-                            <strong>Password:</strong> password
-                        </Typography>
-                    </Box>
 
                     <Box sx={{ textAlign: 'center' }}>
                         <Link to="/" style={{ color: '#2563EB', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 600 }}>
