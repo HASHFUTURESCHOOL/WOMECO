@@ -2,13 +2,6 @@
   "version": 2,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "build",
-  "redirects": [
-    {
-      "source": "/admin",
-      "destination": "https://admin.womeco.org",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
