@@ -69,7 +69,7 @@ const Footer = () => {
               <li><Link to="/about" style={{ color: '#94A3B8', fontSize: '0.9rem', transition: 'color 0.2s' }}>Mission & Vision</Link></li>
               <li><Link to="/about" style={{ color: '#94A3B8', fontSize: '0.9rem', transition: 'color 0.2s' }}>Leadership Council</Link></li>
               <li><Link to="/#regional-hubs" style={{ color: '#94A3B8', fontSize: '0.9rem', transition: 'color 0.2s' }}>Regional Hubs</Link></li>
-              <li><Link to="/about" style={{ color: '#94A3B8', fontSize: '0.9rem', transition: 'color 0.2s' }}>Advisory Board</Link></li>
+              <li><Link to="/admin" style={{ color: '#60A5FA', fontSize: '0.9rem', fontWeight: 600 }}>Secretariat Admin Portal</Link></li>
               <li><Link to="/news" style={{ color: '#94A3B8', fontSize: '0.9rem', transition: 'color 0.2s' }}>Annual Report 2026</Link></li>
             </Box>
           </Grid>
