@@ -106,7 +106,12 @@ const AdminNavBar = () => {
           {/* Right Actions */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Button
-              href="http://localhost:3000"
+              href={
+                process.env.REACT_APP_PUBLIC_URL || 
+                (typeof window !== 'undefined' && window.location.hostname !== 'localhost' 
+                  ? 'https://womeco.org' 
+                  : 'http://localhost:3000')
+              }
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"

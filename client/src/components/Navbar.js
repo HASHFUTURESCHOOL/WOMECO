@@ -72,7 +72,17 @@ const Navbar = () => {
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2.5, color: '#CBD5E1' }}>
               <a href="#regional-hubs" style={{ color: 'inherit' }}>Regional Hubs</a>
               <a href="#publications" style={{ color: 'inherit' }}>Policy Briefs</a>
-              <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" style={{ color: '#60A5FA', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
+              <a 
+                href={
+                  process.env.REACT_APP_ADMIN_URL || 
+                  (typeof window !== 'undefined' && window.location.hostname !== 'localhost' 
+                    ? 'https://admin.womeco.org' 
+                    : 'http://localhost:3001')
+                } 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ color: '#60A5FA', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}
+              >
                 <ShieldCheckIcon size={13} color="#60A5FA" /> Admin Portal
               </a>
             </Box>

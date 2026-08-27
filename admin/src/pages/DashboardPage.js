@@ -3,6 +3,11 @@ import api from '../services/api';
 import { Link } from 'react-router-dom';
 import { Container, Typography, Grid, Paper, Box, Button, Chip } from '@mui/material';
 
+const publicUrl = process.env.REACT_APP_PUBLIC_URL || 
+  (typeof window !== 'undefined' && window.location.hostname !== 'localhost' 
+    ? 'https://womeco.org' 
+    : 'http://localhost:3000');
+
 const DashboardPage = () => {
     const [articleCount, setArticleCount] = useState(3);
     const [programCount, setProgramCount] = useState(4);
@@ -41,7 +46,7 @@ const DashboardPage = () => {
 
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                     <Chip
-                        label={serverOnline ? 'API Gateway Active (Port 5000)' : 'API Standalone'}
+                        label={serverOnline ? 'API Gateway Active' : 'API Standalone'}
                         size="small"
                         sx={{ bgcolor: '#ECFDF5', color: '#059669', fontWeight: 700, border: '1px solid rgba(16, 185, 129, 0.3)' }}
                     />
@@ -105,7 +110,7 @@ const DashboardPage = () => {
                         <Typography variant="body2" color="#64748B" mb={2}>
                             Americas, Europe, Asia-Pacific, Africa, Middle East.
                         </Typography>
-                        <Button href="http://localhost:3000/#regional-hubs" target="_blank" variant="outlined" size="small" sx={{ fontWeight: 700 }}>
+                        <Button href={`${publicUrl}/#regional-hubs`} target="_blank" variant="outlined" size="small" sx={{ fontWeight: 700 }}>
                             View Hubs Map →
                         </Button>
                     </Paper>
@@ -147,7 +152,7 @@ const DashboardPage = () => {
                         <Button
                             fullWidth
                             variant="outlined"
-                            href="http://localhost:3000"
+                            href={publicUrl}
                             target="_blank"
                             sx={{ py: 1.5, borderRadius: '10px', fontWeight: 700 }}
                         >
@@ -158,7 +163,7 @@ const DashboardPage = () => {
                         <Button
                             fullWidth
                             variant="outlined"
-                            href="http://localhost:3000/contact"
+                            href={`${publicUrl}/contact`}
                             target="_blank"
                             sx={{ py: 1.5, borderRadius: '10px', fontWeight: 700 }}
                         >
