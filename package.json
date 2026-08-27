@@ -2,11 +2,16 @@
   "name": "womeco",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "admin"
+  ],
   "scripts": {
-    "vercel-build": "cd client && npm install --legacy-peer-deps && npm run build",
-    "build": "cd client && npm install --legacy-peer-deps && npm run build",
-    "build:client": "cd client && npm install --legacy-peer-deps && npm run build",
-    "build:admin": "cd admin && npm install --legacy-peer-deps && npm run build"
+    "vercel-build": "npm run build --workspace=client",
+    "build": "npm run build --workspace=client",
+    "build:client": "npm run build --workspace=client",
+    "build:admin": "npm run build --workspace=admin"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
