@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact WOMECO - Get in touch with our team, visit our regional offices, or join our community">
+    <title>Contact Us - WOMECO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="language-selector">
+                        <i class="fas fa-globe"></i>
+                        <select id="language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>WOMECO</h1>
+                            <span class="logo-subtitle">World Meaningful Education Council</span>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">Who We Are</a></li>
+                                <li><a href="about.html#mission">Mission & Vision</a></li>
+                                <li><a href="about.html#team">Leadership</a></li>
+                                <li><a href="about.html#partners">Partners</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Programs <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="programs.html#global-learning">Global Learning Initiatives</a></li>
+                                <li><a href="programs.html#teacher-development">Teacher Development</a></li>
+                                <li><a href="programs.html#digital-education">Digital Education</a></li>
+                                <li><a href="programs.html#sustainability">Education for Sustainability</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Research <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="research.html">Publications</a></li>
+                                <li><a href="research.html#reports">Global Reports</a></li>
+                                <li><a href="research.html#data">Data & Statistics</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Get in touch with our team.</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-options">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>General Inquiries</h3>
+                    <p>For general questions about WOMECO</p>
+                    <a href="mailto:info@womeco.org">info@womeco.org</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Media & Press</h3>
+                    <p>For media inquiries and press releases</p>
+                    <a href="mailto:press@womeco.org">press@womeco.org</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnerships</h3>
+                    <p>Explore collaboration opportunities</p>
+                    <a href="mailto:partnerships@womeco.org">partnerships@womeco.org</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Careers</h3>
+                    <p>Join our team and make a difference</p>
+                    <a href="mailto:careers@womeco.org">careers@womeco.org</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="form-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-intro">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and our team will get back to you within 24-48 hours.</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Please select...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="programs">Program Information</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="media">Media Inquiry</option>
+                            <option value="research">Research Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter">
+                            <span>Subscribe to our newsletter for updates on global education</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Offices -->
+    <section class="content-section" id="offices">
+        <div class="container">
+            <div class="section-header">
+                <h2>Regional Offices</h2>
+                <p>Find a WOMECO office near you</p>
+            </div>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Global Headquarters</h3>
+                    </div>
+                    <p><strong>Geneva, Switzerland</strong></p>
+                    <p>Route des Morillons 15<br>1218 Grand-Saconnex<br>Geneva, Switzerland</p>
+                    <p><i class="fas fa-phone"></i> +41 22 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> geneva@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Africa Regional Office</h3>
+                    </div>
+                    <p><strong>Nairobi, Kenya</strong></p>
+                    <p>UN Avenue, Gigiri<br>P.O. Box 30552<br>Nairobi 00100, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 20 762 1234</p>
+                    <p><i class="fas fa-envelope"></i> nairobi@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Asia-Pacific Office</h3>
+                    </div>
+                    <p><strong>Bangkok, Thailand</strong></p>
+                    <p>920 Sukhumvit Road<br>Prakanong, Klongtoei<br>Bangkok 10110, Thailand</p>
+                    <p><i class="fas fa-phone"></i> +66 2 391 0577</p>
+                    <p><i class="fas fa-envelope"></i> bangkok@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Europe Regional Office</h3>
+                    </div>
+                    <p><strong>Paris, France</strong></p>
+                    <p>7 Place de Fontenoy<br>75352 Paris 07 SP<br>France</p>
+                    <p><i class="fas fa-phone"></i> +33 1 45 68 10 00</p>
+                    <p><i class="fas fa-envelope"></i> paris@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Latin America Office</h3>
+                    </div>
+                    <p><strong>Buenos Aires, Argentina</strong></p>
+                    <p>Avenida Corrientes 1234<br>C1043AAZ Buenos Aires<br>Argentina</p>
+                    <p><i class="fas fa-phone"></i> +54 11 4123 4567</p>
+                    <p><i class="fas fa-envelope"></i> buenosaires@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Middle East Office</h3>
+                    </div>
+                    <p><strong>Dubai, UAE</strong></p>
+                    <p>Dubai International Financial Centre<br>The Gate, Level 14<br>Dubai, UAE</p>
+                    <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> dubai@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>North America Office</h3>
+                    </div>
+                    <p><strong>New York, USA</strong></p>
+                    <p>405 Lexington Avenue<br>New York, NY 10174<br>United States</p>
+                    <p><i class="fas fa-phone"></i> +1 212 963 1234</p>
+                    <p><i class="fas fa-envelope"></i> newyork@womeco.org</p>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-region">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>South Asia Office</h3>
+                    </div>
+                    <p><strong>New Delhi, India</strong></p>
+                    <p>B-5/29 Safdarjung Enclave<br>New Delhi 110029<br>India</p>
+                    <p><i class="fas fa-phone"></i> +91 11 2671 1234</p>
+                    <p><i class="fas fa-envelope"></i> newdelhi@womeco.org</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Subscribe to our newsletter for the latest updates on global education initiatives, research, and events.</p>
+                </div>
+                <form class="newsletter-form" data-newsletter>
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Follow Us</h2>
+                <p>Stay updated with our work on social media</p>
+            </div>
+            <div class="social-grid">
+                <a href="#" class="social-box twitter">
+                    <i class="fab fa-twitter"></i>
+                    <div>
+                        <h4>Twitter</h4>
+                        <p>@WOMECO_official</p>
+                    </div>
+                </a>
+                <a href="#" class="social-box facebook">
+                    <i class="fab fa-facebook"></i>
+                    <div>
+                        <h4>Facebook</h4>
+                        <p>/WOMECOofficial</p>
+                    </div>
+                </a>
+                <a href="#" class="social-box linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>/company/womeco</p>
+                    </div>
+                </a>
+                <a href="#" class="social-box youtube">
+                    <i class="fab fa-youtube"></i>
+                    <div>
+                        <h4>YouTube</h4>
+                        <p>/WOMECOtv</p>
+                    </div>
+                </a>
+                <a href="#" class="social-box instagram">
+                    <i class="fab fa-instagram"></i>
+                    <div>
+                        <h4>Instagram</h4>
+                        <p>@womeco_official</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>WOMECO</h3>
+                    <p>World Meaningful Education Council</p>
+                    <p>Transforming education for a better tomorrow through global collaboration and innovation.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#team">Leadership</a></li>
+                        <li><a href="about.html#partners">Partners</a></li>
+                        <li><a href="about.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#global-learning">Global Learning</a></li>
+                        <li><a href="programs.html#teacher-development">Teacher Development</a></li>
+                        <li><a href="programs.html#digital-education">Digital Education</a></li>
+                        <li><a href="programs.html#sustainability">Sustainability</a></li>
+                        <li><a href="programs.html#inclusive">Inclusive Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="research.html">Publications</a></li>
+                        <li><a href="research.html#reports">Reports</a></li>
+                        <li><a href="research.html#data">Data & Statistics</a></li>
+                        <li><a href="news.html">News & Stories</a></li>
+                        <li><a href="contact.html#media">Media Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#offices">Regional Offices</a></li>
+                        <li><a href="contact.html#press">Press Inquiries</a></li>
+                        <li><a href="contact.html#newsletter">Newsletter</a></li>
+                        <li><a href="contact.html#events">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 World Meaningful Education Council (WOMECO). All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will get back to you within 24-48 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

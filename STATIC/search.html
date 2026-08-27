@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search WOMECO - Find information about our programs, research, impact stories, and more">
+    <title>Search - WOMECO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="language-selector">
+                        <i class="fas fa-globe"></i>
+                        <select id="language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>WOMECO</h1>
+                            <span class="logo-subtitle">World Meaningful Education Council</span>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">Who We Are</a></li>
+                                <li><a href="about.html#mission">Mission & Vision</a></li>
+                                <li><a href="about.html#team">Leadership</a></li>
+                                <li><a href="about.html#partners">Partners</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Programs <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="programs.html#global-learning">Global Learning Initiatives</a></li>
+                                <li><a href="programs.html#teacher-development">Teacher Development</a></li>
+                                <li><a href="programs.html#digital-education">Digital Education</a></li>
+                                <li><a href="programs.html#sustainability">Education for Sustainability</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Research <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="research.html">Publications</a></li>
+                                <li><a href="research.html#reports">Global Reports</a></li>
+                                <li><a href="research.html#data">Data & Statistics</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Header -->
+    <section class="search-header">
+        <div class="container">
+            <h1>Search WOMECO</h1>
+            <div class="main-search-box">
+                <input type="text" id="mainSearchInput" placeholder="What are you looking for?">
+                <button id="mainSearchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Filters -->
+    <section class="search-filters-section">
+        <div class="container">
+            <div class="search-filters">
+                <button class="search-filter-btn active" data-type="all">All</button>
+                <button class="search-filter-btn" data-type="pages">Pages</button>
+                <button class="search-filter-btn" data-type="publications">Publications</button>
+                <button class="search-filter-btn" data-type="news">News</button>
+                <button class="search-filter-btn" data-type="programs">Programs</button>
+                <button class="search-filter-btn" data-type="data">Data & Reports</button>
+            </div>
+            <div class="search-sort">
+                <label>Sort by:</label>
+                <select id="searchSort">
+                    <option value="relevance">Relevance</option>
+                    <option value="date">Most Recent</option>
+                    <option value="title">Title A-Z</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <section class="search-results-section">
+        <div class="container">
+            <div class="search-results-header">
+                <h2 id="resultsCount">Search results will appear here</h2>
+            </div>
+
+            <div id="searchResults" class="search-results">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+
+            <!-- No Results State -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No results found</h3>
+                <p>Try different keywords or browse our popular pages below</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Searches -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Searches</h2>
+            </div>
+            <div class="popular-searches">
+                <a href="#" class="popular-search-tag" data-search="teacher training">Teacher Training</a>
+                <a href="#" class="popular-search-tag" data-search="digital education">Digital Education</a>
+                <a href="#" class="popular-search-tag" data-search="global education report">Global Education Report</a>
+                <a href="#" class="popular-search-tag" data-search="sustainability">Sustainability</a>
+                <a href="#" class="popular-search-tag" data-search="refugee education">Refugee Education</a>
+                <a href="#" class="popular-search-tag" data-search="AI in education">AI in Education</a>
+                <a href="#" class="popular-search-tag" data-search="inclusive education">Inclusive Education</a>
+                <a href="#" class="popular-search-tag" data-search="data statistics">Data & Statistics</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse by Category</h2>
+            </div>
+            <div class="quick-links-grid">
+                <a href="programs.html" class="quick-link-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Programs</h3>
+                    <p>Explore our global education initiatives</p>
+                </a>
+                <a href="research.html" class="quick-link-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Research & Data</h3>
+                    <p>Access reports and statistics</p>
+                </a>
+                <a href="impact.html" class="quick-link-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Impact Stories</h3>
+                    <p>Read success stories worldwide</p>
+                </a>
+                <a href="news.html" class="quick-link-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>News & Updates</h3>
+                    <p>Latest announcements and stories</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>WOMECO</h3>
+                    <p>World Meaningful Education Council</p>
+                    <p>Transforming education for a better tomorrow through global collaboration and innovation.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#team">Leadership</a></li>
+                        <li><a href="about.html#partners">Partners</a></li>
+                        <li><a href="about.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#global-learning">Global Learning</a></li>
+                        <li><a href="programs.html#teacher-development">Teacher Development</a></li>
+                        <li><a href="programs.html#digital-education">Digital Education</a></li>
+                        <li><a href="programs.html#sustainability">Sustainability</a></li>
+                        <li><a href="programs.html#inclusive">Inclusive Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="research.html">Publications</a></li>
+                        <li><a href="research.html#reports">Reports</a></li>
+                        <li><a href="research.html#data">Data & Statistics</a></li>
+                        <li><a href="news.html">News & Stories</a></li>
+                        <li><a href="contact.html#media">Media Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#offices">Regional Offices</a></li>
+                        <li><a href="contact.html#press">Press Inquiries</a></li>
+                        <li><a href="contact.html#newsletter">Newsletter</a></li>
+                        <li><a href="contact.html#events">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 World Meaningful Education Council (WOMECO). All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

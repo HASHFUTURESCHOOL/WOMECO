@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="World Meaningful Education Council - Transforming global education through innovation, collaboration, and sustainable development">
+    <title>WOMECO - World Meaningful Education Council</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="language-selector">
+                        <i class="fas fa-globe"></i>
+                        <select id="language">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="ar">العربية</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>WOMECO</h1>
+                        <!-- Subtitle removed for cleaner look -->
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">Who We Are</a></li>
+                                <li><a href="about.html#mission">Mission & Vision</a></li>
+                                <li><a href="about.html#team">Leadership</a></li>
+                                <li><a href="about.html#partners">Partners</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Programs <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="programs.html#global-learning">Global Learning Initiatives</a></li>
+                                <li><a href="programs.html#teacher-development">Teacher Development</a></li>
+                                <li><a href="programs.html#digital-education">Digital Education</a></li>
+                                <li><a href="programs.html#sustainability">Education for Sustainability</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Research <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="research.html">Publications</a></li>
+                                <li><a href="research.html#reports">Global Reports</a></li>
+                                <li><a href="research.html#data">Data & Statistics</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Video Section -->
+    <section class="hero-video-section">
+        <div class="hero-video-container">
+            <div class="video-background">
+                <div class="video-placeholder-hero">
+                    <i class="fas fa-play-circle"></i>
+                    <div class="video-overlay">
+                        <div class="container">
+                            <div class="hero-video-content">
+                                <span class="hero-badge">Featured Initiative</span>
+                                <h1 class="hero-video-title">Shaping the Future of Education</h1>
+                                <p class="hero-video-subtitle">Join global leaders, educators, and innovators in
+                                    transforming education for the digital age.</p>
+                                <div class="hero-video-buttons">
+                                    <a href="#" class="btn-hero-primary">Read the Report</a>
+                                    <a href="about.html" class="btn-hero-outline">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="157">0</div>
+                    <div class="stat-label">Countries Reached</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-label">Million Students Impacted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2.3">0</div>
+                    <div class="stat-label">Million Teachers Trained</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="850">0</div>
+                    <div class="stat-label">Active Programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Content Grid -->
+    <section class="featured-content-section">
+        <div class="container">
+            <div class="featured-content-grid">
+                <div class="featured-large-card">
+                    <div class="featured-image">
+                        <!-- Placeholder replaced with cleaner div in CSS -->
+                        <span class="content-badge">Spotlight</span>
+                    </div>
+                    <div class="featured-content">
+                        <span class="content-category">Global Initiative</span>
+                        <h2>Future of Education Summit 2025</h2>
+                        <p>World leaders commit to transforming education systems to meet the demands of a rapidly
+                            changing world. Discover the key outcomes and commitments.</p>
+                        <a href="#" class="content-link">Read more</a>
+                    </div>
+                </div>
+                <div class="featured-small-card">
+                    <div class="featured-small-image">
+                        <!-- Image placeholder handled by CSS -->
+                    </div>
+                    <div class="featured-small-content">
+                        <span class="content-category-small">Video</span>
+                        <h3>AI in Education</h3>
+                        <p>Exploring the transformative potential of artificial intelligence</p>
+                    </div>
+                </div>
+                <div class="featured-small-card">
+                    <div class="featured-small-image">
+                        <!-- Image placeholder handled by CSS -->
+                    </div>
+                    <div class="featured-small-content">
+                        <span class="content-category-small">Report</span>
+                        <h3>Global Education Index</h3>
+                        <p>Latest data on education access worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery-section">
+        <div class="container">
+            <div class="section-header-wef">
+                <h2>Latest Videos</h2>
+                <a href="#" class="view-all-link">View all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="video-gallery-grid">
+                <div class="video-gallery-card">
+                    <div class="video-thumb">
+                        <div class="video-thumb-placeholder">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span class="video-duration-badge">12:45</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-date">March 15, 2025</span>
+                        <h3>Digital Learning Revolution</h3>
+                        <p>How technology is transforming classrooms across the globe</p>
+                    </div>
+                </div>
+                <div class="video-gallery-card">
+                    <div class="video-thumb">
+                        <div class="video-thumb-placeholder">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span class="video-duration-badge">8:30</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-date">March 10, 2025</span>
+                        <h3>Teacher Training Excellence</h3>
+                        <p>Empowering educators with modern pedagogical methods</p>
+                    </div>
+                </div>
+                <div class="video-gallery-card">
+                    <div class="video-thumb">
+                        <div class="video-thumb-placeholder">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span class="video-duration-badge">15:20</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-date">March 5, 2025</span>
+                        <h3>Sustainability in Education</h3>
+                        <p>Integrating climate action into curricula worldwide</p>
+                    </div>
+                </div>
+                <div class="video-gallery-card">
+                    <div class="video-thumb">
+                        <div class="video-thumb-placeholder">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span class="video-duration-badge">10:15</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-date">February 28, 2025</span>
+                        <h3>Global Education Partnership</h3>
+                        <p>Collaborating across borders for better learning outcomes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Content Section -->
+    <section class="image-content-section">
+        <div class="container">
+            <div class="section-header-wef">
+                <h2>In Focus</h2>
+                <a href="#" class="view-all-link">Explore all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="image-content-grid">
+                <div class="image-content-card large-card">
+                    <div class="image-content-visual">
+                        <div class="image-placeholder-content">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="image-content-overlay">
+                            <span class="overlay-category">Education Access</span>
+                            <h3>Bridging the Digital Divide</h3>
+                            <p>Bringing quality education to remote and underserved communities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content-card">
+                    <div class="image-content-visual">
+                        <div class="image-placeholder-content">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="image-content-overlay">
+                            <span class="overlay-category">Inclusion</span>
+                            <h3>Education for All</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content-card">
+                    <div class="image-content-visual">
+                        <div class="image-placeholder-content">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="image-content-overlay">
+                            <span class="overlay-category">Innovation</span>
+                            <h3>Future Skills</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content-card">
+                    <div class="image-content-visual">
+                        <div class="image-placeholder-content">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="image-content-overlay">
+                            <span class="overlay-category">Sustainability</span>
+                            <h3>Green Education</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content-card">
+                    <div class="image-content-visual">
+                        <div class="image-placeholder-content">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="image-content-overlay">
+                            <span class="overlay-category">Programs</span>
+                            <h3>Global Learning</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas -->
+    <section class="focus-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Focus Areas</h2>
+                <p>Driving meaningful change across all aspects of education</p>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <!-- Icon removed for cleaner look -->
+                    <h3>Digital Transformation</h3>
+                    <p>Leveraging technology to make quality education accessible to everyone, everywhere, at any time.
+                    </p>
+                    <a href="programs.html#digital-education" class="card-link">Learn More</a>
+                </div>
+                <div class="focus-card">
+                    <!-- Icon removed -->
+                    <h3>Sustainability Education</h3>
+                    <p>Integrating climate action and sustainable development principles into curricula worldwide.</p>
+                    <a href="programs.html#sustainability" class="card-link">Learn More</a>
+                </div>
+                <div class="focus-card">
+                    <!-- Icon removed -->
+                    <h3>Inclusive Learning</h3>
+                    <p>Ensuring educational equity for marginalized communities, girls, and students with disabilities.
+                    </p>
+                    <a href="programs.html#inclusive" class="card-link">Learn More</a>
+                </div>
+                <div class="focus-card">
+                    <!-- Icon removed -->
+                    <h3>Future Skills</h3>
+                    <p>Preparing learners with critical thinking, creativity, and digital literacy for tomorrow's
+                        workforce.</p>
+                    <a href="programs.html#future-skills" class="card-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News & Stories -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Stories</h2>
+                <p>Stay updated with our recent initiatives and global impact</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card featured">
+                    <div class="news-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="news-badge">Featured</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Global Initiative</span>
+                        <h3>Global Education Summit 2025: Building Resilient Learning Systems</h3>
+                        <p>World leaders commit to $15 billion investment in education infrastructure and teacher
+                            training programs across 80 countries.</p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> March 15, 2025</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Research</span>
+                        <h3>New Report: AI in Education - Opportunities and Challenges</h3>
+                        <p>WOMECO releases comprehensive study on artificial intelligence integration in classrooms
+                            worldwide.</p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> March 10, 2025</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Success Story</span>
+                        <h3>Digital Literacy Program Transforms Rural Communities</h3>
+                        <p>Over 500,000 students in remote areas gain access to quality digital education through WOMECO
+                            initiative.</p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> March 5, 2025</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Partnership</span>
+                        <h3>WOMECO Partners with Tech Giants for Education Innovation</h3>
+                        <p>Strategic collaboration aims to provide free educational resources and tools to underserved
+                            regions.</p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> February 28, 2025</span>
+                            <span><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-cta">
+                <a href="news.html" class="btn btn-outline">View All Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications & Resources -->
+    <section class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Publications & Resources</h2>
+                <p>Access our comprehensive library of research, reports, and educational materials</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <!-- Icon removed -->
+                    <h3>Global Education Report 2025</h3>
+                    <p>Annual comprehensive analysis of education trends, challenges, and opportunities worldwide.</p>
+                    <a href="#" class="btn btn-small btn-outline">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <!-- Icon removed -->
+                    <h3>Education Data & Statistics</h3>
+                    <p>Interactive database with key education indicators from 195 countries.</p>
+                    <a href="#" class="btn btn-small btn-outline">Explore Data</a>
+                </div>
+                <div class="resource-card">
+                    <!-- Icon removed -->
+                    <h3>Teacher Training Toolkit</h3>
+                    <p>Practical resources and methodologies for professional development programs.</p>
+                    <a href="#" class="btn btn-small btn-outline">Access Toolkit</a>
+                </div>
+                <div class="resource-card">
+                    <!-- Icon removed -->
+                    <h3>Webinar Series</h3>
+                    <p>Expert discussions on education innovation, policy, and best practices.</p>
+                    <a href="#" class="btn btn-small btn-outline">Watch Videos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Partners</h2>
+                <p>Collaborating with global organizations to maximize impact</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <div class="logo-placeholder">UN</div>
+                </div>
+                <div class="partner-logo">
+                    <div class="logo-placeholder">UNESCO</div>
+                </div>
+                <div class="partner-logo">
+                    <div class="logo-placeholder">UNICEF</div>
+                </div>
+                <div class="partner-logo">
+                    <div class="logo-placeholder">World Bank</div>
+                </div>
+                <div class="partner-logo">
+                    <div class="logo-placeholder">OECD</div>
+                </div>
+                <div class="partner-logo">
+                    <div class="logo-placeholder">Global Partnership</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the Movement for Meaningful Education</h2>
+                <p>Together, we can create a world where every learner has access to quality, relevant, and
+                    transformative education.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Involved</a>
+                    <a href="about.html#donate" class="btn btn-outline btn-large">Support Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>WOMECO</h3>
+                    <p>World Meaningful Education Council</p>
+                    <p>Transforming education for a better tomorrow through global collaboration and innovation.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#team">Leadership</a></li>
+                        <li><a href="about.html#partners">Partners</a></li>
+                        <li><a href="about.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#global-learning">Global Learning</a></li>
+                        <li><a href="programs.html#teacher-development">Teacher Development</a></li>
+                        <li><a href="programs.html#digital-education">Digital Education</a></li>
+                        <li><a href="programs.html#sustainability">Sustainability</a></li>
+                        <li><a href="programs.html#inclusive">Inclusive Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="research.html">Publications</a></li>
+                        <li><a href="research.html#reports">Reports</a></li>
+                        <li><a href="research.html#data">Data & Statistics</a></li>
+                        <li><a href="news.html">News & Stories</a></li>
+                        <li><a href="contact.html#media">Media Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#offices">Regional Offices</a></li>
+                        <li><a href="contact.html#press">Press Inquiries</a></li>
+                        <li><a href="contact.html#newsletter">Newsletter</a></li>
+                        <li><a href="contact.html#events">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 World Meaningful Education Council (WOMECO). All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
