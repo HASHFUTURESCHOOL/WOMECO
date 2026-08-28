@@ -21,6 +21,7 @@ connectDB();
 app.use('/api/articles', require('./routes/articles'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/programs', require('./routes/programs'));
+app.use('/api/subscribers', require('./routes/subscribers'));
 
 app.get('/api', (req, res) => {
     res.json({ message: 'Welcome to the WOMECO API', status: 'online', timestamp: new Date() });

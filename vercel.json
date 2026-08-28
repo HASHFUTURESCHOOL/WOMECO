@@ -6,12 +6,20 @@
     {
       "path": "/api/cron/generate-blog",
       "schedule": "0 9 * * 1"
+    },
+    {
+      "path": "/api/cron/monthly-newsletter",
+      "schedule": "0 9 1 * *"
     }
   ],
   "rewrites": [
     {
       "source": "/api/cron/generate-blog",
       "destination": "/api/cron/generate-blog.js"
+    },
+    {
+      "source": "/api/cron/monthly-newsletter",
+      "destination": "/api/cron/monthly-newsletter.js"
     },
     {
       "source": "/api/(.*)",

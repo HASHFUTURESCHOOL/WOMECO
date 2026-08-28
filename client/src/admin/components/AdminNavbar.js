@@ -101,6 +101,19 @@ const AdminNavbar = () => {
               >
                 Global Initiatives
               </Button>
+              <Button
+                component={Link}
+                to="/admin/subscribers"
+                sx={{
+                  color: location.pathname === '/admin/subscribers' ? '#60A5FA' : '#CBD5E1',
+                  fontWeight: location.pathname === '/admin/subscribers' ? 700 : 500,
+                  bgcolor: location.pathname === '/admin/subscribers' ? 'rgba(37, 99, 235, 0.1)' : 'transparent',
+                  borderRadius: '8px',
+                  px: 2
+                }}
+              >
+                Monthly Newsletter
+              </Button>
             </Box>
           )}
 

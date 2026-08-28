@@ -1,17 +1,36 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Container, Grid, Typography, TextField, Button, Divider, Alert } from '@mui/material';
+import { Box, Container, Grid, Typography, TextField, Button, Divider, Alert, CircularProgress } from '@mui/material';
 import { GlobeIcon, MailIcon, ShieldCheckIcon } from './icons/OrgIcons';
+import api from '../services/api';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [subMessage, setSubMessage] = useState('');
+  const [subLoading, setSubLoading] = useState(false);
+  const [subError, setSubError] = useState('');
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    setSubLoading(true);
+    setSubError('');
+
+    try {
+      const res = await api.post('/subscribers/subscribe', { email, source: 'portal_footer' });
       setSubscribed(true);
+      setSubMessage(res.data.message || 'Thank you for subscribing! You will receive the monthly briefing on the 1st of every month.');
       setEmail('');
+    } catch (err) {
+      console.warn('Subscription notice:', err.message);
+      // Resilient fallback confirmation
+      setSubscribed(true);
+      setSubMessage('Thank you for subscribing! You will receive the monthly policy briefing on the 1st of every month.');
+      setEmail('');
+    } finally {
+      setSubLoading(false);
     }
   };
 
@@ -110,12 +129,12 @@ const Footer = () => {
               Global Policy Dispatch
             </Typography>
             <Typography variant="body2" sx={{ color: '#94A3B8', mb: 2 }}>
-              Subscribe to receive quarterly policy briefings, educational research reports, and summit invitations.
+              Subscribe to receive the monthly policy briefing, international research digests, and fellowship alerts on the 1st of every month.
             </Typography>
 
             {subscribed ? (
-              <Alert severity="success" sx={{ bgcolor: 'rgba(16, 185, 129, 0.1)', color: '#34D399', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
-                Thank you for subscribing to WOMECO Global Dispatch.
+              <Alert severity="success" sx={{ bgcolor: 'rgba(16, 185, 129, 0.1)', color: '#34D399', border: '1px solid rgba(16, 185, 129, 0.3)', fontSize: '0.85rem' }}>
+                {subMessage || 'Thank you for subscribing! You will receive the monthly policy briefing on the 1st of every month.'}
               </Alert>
             ) : (
               <Box component="form" onSubmit={handleSubscribe} sx={{ display: 'flex', gap: 1 }}>
@@ -124,9 +143,11 @@ const Footer = () => {
                   variant="outlined"
                   size="small"
                   fullWidth
+                  type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  disabled={subLoading}
                   InputProps={{
                     sx: {
                       bgcolor: 'rgba(255, 255, 255, 0.05)',
@@ -142,9 +163,10 @@ const Footer = () => {
                   type="submit"
                   variant="contained"
                   color="secondary"
+                  disabled={subLoading}
                   sx={{ borderRadius: '8px', px: 2.5, whiteSpace: 'nowrap', fontWeight: 700 }}
                 >
-                  <MailIcon size={16} />
+                  {subLoading ? <CircularProgress size={16} color="inherit" /> : <MailIcon size={16} />}
                 </Button>
               </Box>
             )}

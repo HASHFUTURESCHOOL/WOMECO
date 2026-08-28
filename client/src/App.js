@@ -22,6 +22,7 @@ import AdminLoginPage from './admin/pages/AdminLoginPage';
 import AdminDashboardPage from './admin/pages/AdminDashboardPage';
 import AdminArticlePage from './admin/pages/AdminArticlePage';
 import AdminProgramsPage from './admin/pages/AdminProgramsPage';
+import AdminSubscribersPage from './admin/pages/AdminSubscribersPage';
 
 // Layout Controller: Swaps between Public and Admin Navigation Bars
 const LayoutWrapper = () => {
@@ -50,6 +51,7 @@ const LayoutWrapper = () => {
           <Route path="/admin" element={<PrivateRoute><AdminDashboardPage /></PrivateRoute>} />
           <Route path="/admin/articles" element={<PrivateRoute><AdminArticlePage /></PrivateRoute>} />
           <Route path="/admin/programs" element={<PrivateRoute><AdminProgramsPage /></PrivateRoute>} />
+          <Route path="/admin/subscribers" element={<PrivateRoute><AdminSubscribersPage /></PrivateRoute>} />
         </Routes>
       </Box>
 
