@@ -2,7 +2,17 @@
   "version": 2,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "build",
+  "crons": [
+    {
+      "path": "/api/cron/generate-blog",
+      "schedule": "0 9 * * 1"
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/api/cron/generate-blog",
+      "destination": "/api/cron/generate-blog.js"
+    },
     {
       "source": "/api/(.*)",
       "destination": "/api/index.js"

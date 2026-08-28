@@ -68,7 +68,10 @@ const NewsPage = () => {
       try {
         const res = await api.get('/articles', { timeout: 2000 });
         if (isMounted && res.data && res.data.length > 0) {
-          setArticles(res.data);
+          const publishedOnly = res.data.filter(a => (a.status || 'published') === 'published');
+          if (publishedOnly.length > 0) {
+            setArticles(publishedOnly);
+          }
         }
       } catch (err) {
         // Keep initial curated articles
