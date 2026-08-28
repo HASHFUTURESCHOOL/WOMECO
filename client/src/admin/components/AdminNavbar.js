@@ -21,15 +21,22 @@ const AdminNavbar = () => {
           
           {/* Left Brand */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-            <Link to="/admin" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
-              <Box sx={{ p: 0.8, borderRadius: '8px', bgcolor: 'rgba(37, 99, 235, 0.2)', display: 'flex' }}>
-                <GlobeIcon size={20} color="#60A5FA" />
-              </Box>
+            <Link to="/admin" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+              <Box
+                component="img"
+                src="/logo-emblem.png"
+                alt="WOMECO Emblem"
+                sx={{
+                  height: 38,
+                  width: 'auto',
+                  display: 'block'
+                }}
+              />
               <Box>
                 <Typography variant="h6" fontWeight={800} color="#FFFFFF" letterSpacing="0.05em" lineHeight={1.1}>
                   WOMECO
                 </Typography>
-                <Typography variant="caption" color="#94A3B8" letterSpacing="0.1em" fontWeight={700} display="block">
+                <Typography variant="caption" color="#94A3B8" letterSpacing="0.08em" fontWeight={700} display="block">
                   SECRETARIAT ADMIN PORTAL
                 </Typography>
               </Box>

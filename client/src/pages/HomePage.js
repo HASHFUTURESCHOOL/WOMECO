@@ -100,21 +100,33 @@ const HomePage = () => {
             {/* Left Hero Content */}
             <Grid item xs={12} md={7}>
               <Box sx={{ mb: 3 }}>
-                <Chip
-                  icon={<SparklesIcon size={14} color="#60A5FA" />}
-                  label="WORLD MEANINGFUL EDUCATION COUNCIL"
-                  sx={{
-                    bgcolor: 'rgba(37, 99, 235, 0.2)',
-                    color: '#60A5FA',
-                    fontWeight: 800,
-                    fontSize: '0.78rem',
-                    letterSpacing: '0.08em',
-                    border: '1px solid rgba(96, 165, 250, 0.3)',
-                    px: 1,
-                    py: 2,
-                    mb: 3,
-                  }}
-                />
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3, flexWrap: 'wrap' }}>
+                  <Box
+                    component="img"
+                    src="/logo-emblem.png"
+                    alt="WOMECO Emblem"
+                    sx={{
+                      height: 40,
+                      width: 'auto',
+                      display: 'block',
+                      filter: 'drop-shadow(0 2px 8px rgba(37, 99, 235, 0.4))'
+                    }}
+                  />
+                  <Chip
+                    icon={<SparklesIcon size={14} color="#60A5FA" />}
+                    label="WORLD MEANINGFUL EDUCATION COUNCIL"
+                    sx={{
+                      bgcolor: 'rgba(37, 99, 235, 0.2)',
+                      color: '#60A5FA',
+                      fontWeight: 800,
+                      fontSize: '0.78rem',
+                      letterSpacing: '0.08em',
+                      border: '1px solid rgba(96, 165, 250, 0.3)',
+                      px: 1,
+                      py: 2,
+                    }}
+                  />
+                </Box>
                 <Typography variant="h1" sx={{ fontWeight: 800, lineHeight: 1.1, mb: 3, color: '#FFFFFF' }}>
                   Shaping the Future of <span className="text-gradient">Meaningful Learning</span> Worldwide.
                 </Typography>

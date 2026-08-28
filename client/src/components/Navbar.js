@@ -88,29 +88,24 @@ const Navbar = () => {
         <Container maxWidth="xl" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           
           {/* Logo & Emblem */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
             <Box
+              component="img"
+              src="/logo-emblem.png"
+              alt="WOMECO Official Emblem"
               sx={{
-                width: 42,
-                height: 42,
-                borderRadius: '10px',
-                background: 'linear-gradient(135deg, #2563EB 0%, #0F172A 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#FFFFFF',
-                boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
+                height: 44,
+                width: 'auto',
+                display: 'block',
+                filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25))'
               }}
-            >
-              <GlobeIcon size={24} color="#FFFFFF" />
-            </Box>
+            />
             <Box>
-              <Typography variant="h6" sx={{ color: '#FFFFFF', fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+              <Typography variant="h6" sx={{ color: '#FFFFFF', fontWeight: 900, letterSpacing: '0.04em', lineHeight: 1.1 }}>
                 WOMECO
               </Typography>
-              <Typography variant="caption" sx={{ color: '#94A3B8', fontSize: '0.68rem', letterSpacing: '0.08em', fontWeight: 600, display: 'block' }}>
-                GLOBAL EDUCATION COUNCIL
+              <Typography variant="caption" sx={{ color: '#94A3B8', fontSize: '0.64rem', letterSpacing: '0.06em', fontWeight: 700, display: 'block', textTransform: 'uppercase' }}>
+                World Meaningful Education Council
               </Typography>
             </Box>
           </Link>

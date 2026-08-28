@@ -57,13 +57,21 @@ const AdminLoginPage = () => {
                 }}
             >
                 {/* Logo & Title */}
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                    <Box sx={{ p: 0.8, borderRadius: '8px', bgcolor: 'rgba(37, 99, 235, 0.1)', display: 'flex' }}>
-                        <GlobeIcon size={24} color="#2563EB" />
-                    </Box>
-                    <Typography variant="h5" fontWeight={800} color="#0F172A">
-                        WOMECO
-                    </Typography>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 2 }}>
+                    <Box
+                        component="img"
+                        src="/logo.png"
+                        alt="WOMECO Official Logo"
+                        sx={{
+                            maxHeight: 80,
+                            maxWidth: 240,
+                            width: 'auto',
+                            height: 'auto',
+                            objectFit: 'contain',
+                            display: 'block',
+                            mb: 1
+                        }}
+                    />
                 </Box>
 
                 <Chip

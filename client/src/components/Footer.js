@@ -24,23 +24,24 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
               <Box
+                component="img"
+                src="/logo-emblem.png"
+                alt="WOMECO Official Emblem"
                 sx={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #2563EB 0%, #0F172A 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#FFFFFF',
-                  boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)',
+                  height: 48,
+                  width: 'auto',
+                  display: 'block',
+                  filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3))'
                 }}
-              >
-                <GlobeIcon size={22} color="#FFFFFF" />
+              />
+              <Box>
+                <Typography variant="h5" sx={{ color: '#FFFFFF', fontWeight: 900, letterSpacing: '0.04em', lineHeight: 1.1 }}>
+                  WOMECO
+                </Typography>
+                <Typography variant="caption" sx={{ color: '#94A3B8', fontSize: '0.68rem', letterSpacing: '0.06em', fontWeight: 700, display: 'block', textTransform: 'uppercase' }}>
+                  World Meaningful Education Council
+                </Typography>
               </Box>
-              <Typography variant="h5" sx={{ color: '#FFFFFF', fontWeight: 800, letterSpacing: '-0.02em' }}>
-                WOMECO
-              </Typography>
             </Box>
             <Typography variant="body2" sx={{ color: '#94A3B8', mb: 3, pr: { md: 4 }, lineHeight: 1.65 }}>
               The World Meaningful Education Council (WOMECO) is an international governing body convening policymakers, educators, and global leaders to shape inclusive, future-ready, and purpose-driven education models.
