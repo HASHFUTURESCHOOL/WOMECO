@@ -48,18 +48,32 @@ const AboutPage = () => {
       <Box sx={{ bgcolor: '#0F172A', color: '#FFFFFF', py: 10, textAlign: 'center', position: 'relative' }}>
         <Container maxWidth="md">
           <Box
-            component="img"
-            src="/logo-emblem.png"
-            alt="WOMECO Emblem"
             sx={{
-              height: 72,
-              width: 'auto',
-              display: 'block',
+              height: 80,
+              width: 80,
+              borderRadius: '20px',
+              background: 'linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              p: 1.2,
               mx: 'auto',
               mb: 3,
-              filter: 'drop-shadow(0 4px 16px rgba(37, 99, 235, 0.4))'
+              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.4)',
             }}
-          />
+          >
+            <Box
+              component="img"
+              src="/logo-emblem.png"
+              alt="WOMECO Emblem"
+              sx={{
+                height: '100%',
+                width: 'auto',
+                objectFit: 'contain',
+                display: 'block'
+              }}
+            />
+          </Box>
           <Chip
             icon={<GlobeIcon size={14} color="#60A5FA" />}
             label="ABOUT WOMECO"

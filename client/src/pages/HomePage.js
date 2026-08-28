@@ -100,18 +100,33 @@ const HomePage = () => {
             {/* Left Hero Content */}
             <Grid item xs={12} md={7}>
               <Box sx={{ mb: 3 }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3, flexWrap: 'wrap' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3, flexWrap: 'wrap' }}>
                   <Box
-                    component="img"
-                    src="/logo-emblem.png"
-                    alt="WOMECO Emblem"
                     sx={{
-                      height: 40,
-                      width: 'auto',
-                      display: 'block',
-                      filter: 'drop-shadow(0 2px 8px rgba(37, 99, 235, 0.4))'
+                      height: 48,
+                      width: 48,
+                      borderRadius: '14px',
+                      background: 'linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      p: 0.7,
+                      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.4)',
+                      flexShrink: 0,
                     }}
-                  />
+                  >
+                    <Box
+                      component="img"
+                      src="/logo-emblem.png"
+                      alt="WOMECO Official Emblem"
+                      sx={{
+                        height: '100%',
+                        width: 'auto',
+                        objectFit: 'contain',
+                        display: 'block'
+                      }}
+                    />
+                  </Box>
                   <Chip
                     icon={<SparklesIcon size={14} color="#60A5FA" />}
                     label="WORLD MEANINGFUL EDUCATION COUNCIL"

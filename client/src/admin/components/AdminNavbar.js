@@ -23,15 +23,31 @@ const AdminNavbar = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
             <Link to="/admin" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
               <Box
-                component="img"
-                src="/logo-emblem.png"
-                alt="WOMECO Emblem"
                 sx={{
-                  height: 38,
-                  width: 'auto',
-                  display: 'block'
+                  height: 42,
+                  width: 42,
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  p: 0.5,
+                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.25)',
+                  flexShrink: 0,
                 }}
-              />
+              >
+                <Box
+                  component="img"
+                  src="/logo-emblem.png"
+                  alt="WOMECO Emblem"
+                  sx={{
+                    height: '100%',
+                    width: 'auto',
+                    objectFit: 'contain',
+                    display: 'block'
+                  }}
+                />
+              </Box>
               <Box>
                 <Typography variant="h6" fontWeight={800} color="#FFFFFF" letterSpacing="0.05em" lineHeight={1.1}>
                   WOMECO

@@ -90,16 +90,31 @@ const Navbar = () => {
           {/* Logo & Emblem */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
             <Box
-              component="img"
-              src="/logo-emblem.png"
-              alt="WOMECO Official Emblem"
               sx={{
-                height: 44,
-                width: 'auto',
-                display: 'block',
-                filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25))'
+                height: 46,
+                width: 46,
+                borderRadius: '12px',
+                background: 'linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                p: 0.6,
+                boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.4)',
+                flexShrink: 0,
               }}
-            />
+            >
+              <Box
+                component="img"
+                src="/logo-emblem.png"
+                alt="WOMECO Official Emblem"
+                sx={{
+                  height: '100%',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  display: 'block'
+                }}
+              />
+            </Box>
             <Box>
               <Typography variant="h6" sx={{ color: '#FFFFFF', fontWeight: 900, letterSpacing: '0.04em', lineHeight: 1.1 }}>
                 WOMECO

@@ -24,16 +24,31 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
               <Box
-                component="img"
-                src="/logo-emblem.png"
-                alt="WOMECO Official Emblem"
                 sx={{
                   height: 48,
-                  width: 'auto',
-                  display: 'block',
-                  filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3))'
+                  width: 48,
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  p: 0.7,
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3)',
+                  flexShrink: 0,
                 }}
-              />
+              >
+                <Box
+                  component="img"
+                  src="/logo-emblem.png"
+                  alt="WOMECO Official Emblem"
+                  sx={{
+                    height: '100%',
+                    width: 'auto',
+                    objectFit: 'contain',
+                    display: 'block'
+                  }}
+                />
+              </Box>
               <Box>
                 <Typography variant="h5" sx={{ color: '#FFFFFF', fontWeight: 900, letterSpacing: '0.04em', lineHeight: 1.1 }}>
                   WOMECO
