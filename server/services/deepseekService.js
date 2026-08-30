@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || 'sk-e4c97759992d4c7f9e9ed7949d65b3e8';
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || '';
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 
 const meaningfulEducationTopics = [
@@ -66,6 +66,10 @@ Respond ONLY with valid JSON matching this exact structure:
 }`;
 
     try {
+        if (!DEEPSEEK_API_KEY) {
+            throw new Error('DEEPSEEK_API_KEY is not configured in environment variables');
+        }
+
         const response = await axios.post(
             DEEPSEEK_API_URL,
             {
